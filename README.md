@@ -9,7 +9,7 @@ Each solution is written in a specific programming language and organized into s
 The repository follows the following folder structure:
 - `/kata-level` represents the name of the kata (challenge).
 - `/language` represents the programming language used for the solution.
-- `solution.file` contains the code solution for the kata.
+- `kataName.js` contains the code solution for the kata.
 
 ## Languages
 
