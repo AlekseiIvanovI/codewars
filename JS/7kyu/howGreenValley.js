@@ -9,12 +9,11 @@
 
 //Solution
 function makeValley(arr) {
-    var leftWing = []
-    var rightWing = []
-    arr.sort((a, b) => b - a)
-      .forEach((e, i) => i % 2 == 0 ? 
-               leftWing.push(e) : 
-               rightWing.unshift(e))
-    
-    return [...leftWing, ...rightWing]
+    let leftW = [];
+    let rightW = [];
+  arr.sort((a, b) => b - a)
+    .forEach((e, i) => i % 2 == 0 ? 
+          leftW.push(e) : 
+          rightW.unshift(e))
+  return[...leftW, ...rightW]
 }
