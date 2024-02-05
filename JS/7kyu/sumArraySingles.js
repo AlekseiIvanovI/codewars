@@ -20,4 +20,4 @@ function repeats(arr) {
     }
     
     return sumOfSingles;
-  }
+}
