@@ -16,16 +16,12 @@
 
 //Solution
 function fractran(code, n) {
-    const fractions = code.split(' ').map(fraction => {
-        const [numerator, denominator] = fraction.split('/').map(BigInt);
-        return [numerator, denominator];
-    });
+    const fractions = code.split(' ').map(f => f.split('/').map(BigInt));
     for (let i = 0; i < 1000; i++) {
         let updated = false;
         for (const [numerator, denominator] of fractions) {
-            const product = n * numerator;
-            if (product % denominator === 0n) {
-                n = product / denominator;
+            if (n * numerator % denominator === 0n) {
+                n = (n * numerator) / denominator;
                 updated = true;
                 break;
             }
