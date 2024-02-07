@@ -13,12 +13,9 @@
 
 //Solution
 function warnTheSheep(queue) {
-    const wolfIndex = queue.findIndex(animal => animal === 'wolf');
-    const sheepIndex = queue.length - wolfIndex - 1;
-    
-    if (wolfIndex === queue.length - 1) {
-        return "Pls go away and stop eating my sheep";
-    } else {
-        return `Oi! Sheep number ${sheepIndex}! You are about to be eaten by a wolf!`;
-    }
+    const findWolf = queue.findIndex(wolf => wolf === 'wolf');
+    const closeSheep = queue.length - findWolf - 1;
+  
+  return findWolf === queue.length - 1 ? 'Pls go away and stop eating my sheep' : 
+  `Oi! Sheep number ${closeSheep}! You are about to be eaten by a wolf!`;
 }
